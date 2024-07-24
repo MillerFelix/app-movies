@@ -1,5 +1,6 @@
 import Banner from "../../components/Banner";
 import Card from "../../components/Card";
+import Carousel from "../../components/Carousel";
 import Category, {
   categories,
   filterCategory,
@@ -16,9 +17,11 @@ function Home() {
       <Container>
         {categories.map((category, index) => (
           <Category category={category}>
-            {filterCategory(index).map(({ id }) => (
-              <Card id={id} key={id} />
-            ))}
+            <Carousel>
+              {filterCategory(index).map(({ id }) => (
+                <Card id={id} key={id} />
+              ))}
+            </Carousel>
           </Category>
         ))}
       </Container>
