@@ -14,7 +14,12 @@ function Favorites() {
       <Container>
         <section className={styles.favorites}>
           <h2>Meus Favoritos</h2>
-          {<VideoList videos={favorite} emptyHeading={"Sem favoritos..."} />}
+          {
+            <VideoList
+              videos={favorite}
+              emptyHeading={"😒Sem favoritos...😒"}
+            />
+          }
         </section>
       </Container>
       <Footer />

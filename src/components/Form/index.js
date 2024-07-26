@@ -74,7 +74,7 @@ function Form() {
         <div>
           <button type="submit">Cadastrar</button>
         </div>
-        <div>{errors}</div>
+        {errors ? <div className={styles.error}>{errors}</div> : false}
       </form>
     </section>
   );
